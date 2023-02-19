@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://jsmpeg.com/jsmpeg.min.js"></script>
+    <script src="renderer.js" defer></script>
+    <title>Stream</title>
+</head>
+
+<body>
+  <canvas id="video-canvas" style="width: 960px; height: 540px; border-radius: 10px;"></canvas>
+
+</body>
+
+<script type="text/javascript">
+  const { remote } = require("electron");
+
+
+  var url = "ws://localhost:3333";
+  var canvas = document.getElementById('video-canvas');
+  var player = new JSMpeg.Player(url, {canvas: canvas});
+  
+  setTimeout(() => {
+    if (player.currentTime > 0) {
+      console.log('Прошло 5 секунд, видео запустилось');
+    } else {
+      confirm('Что-то пошло не так! Попробуйте перезапустить приложение и проверить данные доступа к камере')
+      remote.getCurrentWindow().close();
+    }}, 5000);
+
+</script>
+</html>

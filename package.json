@@ -1,0 +1,30 @@
+{
+  "name": "camera-scanner-project",
+  "version": "1.0.0",
+  "description": "The project is going to help with managing local surveillance systems",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "Irina Poltarykhina",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "^6.1.12"
+  },
+  "dependencies": {
+    "electron-prompt": "^1.7.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "ffmpeg": "^0.0.4",
+    "node-onvif": "^0.1.7",
+    "node-rtsp-stream-jsmpeg": "^0.0.2"
+  }
+}

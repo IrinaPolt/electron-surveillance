@@ -1,0 +1,34 @@
+body {
+    margin: 0px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 7%;
+    color: #ad1447;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 37%;
+    background-color: #db7093;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 10px solid transparent;
+    padding: 5px;
+}
+
+.camera_buttons {
+    margin: 20px;
+    font-size: 16px;
+    background-color: #d75480;
+}
+
+.stream_buttons {
+    margin: 10px 5px 5px 5px
+}
+
+#video-canvas {
+    margin: 5px;
+}

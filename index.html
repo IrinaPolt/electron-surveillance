@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="camera-scanner.js" defer></script>
+    <script src="renderer.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>Electron App</title>
+</head>
+
+<body>
+    <h1> Scan the system for IP cameras </h1>
+
+    <button type="button" class="btn btn-primary" id="scan-button"> Start scanning </button>
+
+    <div id="message" style="text-align: center; padding: 10px 0 0 0; color: #ad1447;"></div>
+
+    <div id="cameras_info" style="text-align: center; padding: 10px 0 0 0; color: #ad1447;"></div>
+
+    <div id="button-container" style="text-align: center;"></div>
+
+</body>
+
+<script type="text/javascript">
+  const { remote } = require('electron');
+  const { createVideoWindow } = remote.require('./main');
+
+  function createNewVideoWindow() {
+    createVideoWindow();
+  }
+
+</script>
+</html>
